@@ -1,1 +1,0 @@
-../../lkdotfiles/nvim/.config/nvim/init.lua
