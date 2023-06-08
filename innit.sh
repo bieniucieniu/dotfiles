@@ -6,13 +6,14 @@ then
     makepkg -si
 fi
 
-yay -Sy --needed hyprland wl-clipboard rofi eww-wayland zsh alacritty networkmanageo bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman nvim github-cli google-chrome
+yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanageo bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman nvim github-cli google-chrome
 
 #all nerd-fonts
 yay -Sy --needed nerd-fonts-meta
 
 #oh my zsh
-pacman -Sy --needed zsh curl git && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+pacman -Sy --needed zsh curl git 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 source ${HOME}/.zshrc
 
