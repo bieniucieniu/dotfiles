@@ -1,12 +1,12 @@
 if ! command -v yay &> /dev/null
 then
-    pacman -S --needed git base-devel
+    sudo pacman -S --needed git base-devel
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
 fi
 
-yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanageo bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman nvim github-cli google-chrome
+yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanageo bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome
 
 #all nerd-fonts
 yay -Sy --needed nerd-fonts-meta
