@@ -6,7 +6,7 @@ then
     makepkg -si
 fi
 
-yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanageo bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome
+yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome
 
 #all nerd-fonts
 yay -Sy --needed nerd-fonts-meta
