@@ -51,15 +51,14 @@
     ))
 
 (defwidget centerWidget []
-  (box :halign "start"
+  (box :halign "center"
 			(label :text "${time}")
 		)
   )
 
 
 (defwidget bar []
-  
-  (centerbox :orientation "h" :class "main"
+  (centerbox :orientation "h" 
     (workspacesWidget)
     (centerWidget)
     (sidestuff)
@@ -73,3 +72,10 @@
   :geometry (geometry :width "100%" :anchor "top center")
   (bar)
 )
+(defwindow barSide
+  :monitor 1
+  :windowtype "dock"
+  :exclusive true	
+  :geometry (geometry :width "100%" :anchor "top center")
+  (centerWidget)
+  )
