@@ -21,6 +21,9 @@ return {
 					hide_dotfiles = false,
 					hide_gitignored = true
 				}
+			},
+			window = {
+				width = 25
 			}
 		})
 	end

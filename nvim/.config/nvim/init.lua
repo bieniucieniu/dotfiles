@@ -18,3 +18,5 @@ require("lazy").setup("plugins")
 require("keybindings")
 require("lsp")
 require("config")
+vim.cmd("colorscheme kanagawa-dragon")
+vim.opt.termguicolors = true
