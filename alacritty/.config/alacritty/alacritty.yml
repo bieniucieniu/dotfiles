@@ -15,3 +15,5 @@ window:
   padding:
     x: 0
     y: 0
+import:
+  - ~/.alacritty-colorscheme/themes/campbell.yaml
