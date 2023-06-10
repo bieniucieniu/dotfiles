@@ -1,5 +1,7 @@
 local map = require('utils').map
 
+map('n', '<leader>p', ':!prettier --write %<CR>', { silent = true })
+
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
