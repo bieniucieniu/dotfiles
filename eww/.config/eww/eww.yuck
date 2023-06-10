@@ -34,10 +34,10 @@
 (deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
-(defpoll volume :interval "1s"
+(defpoll volume :interval "0.3s"
   "scripts/get-vol")
 
-(defpoll ramusage :interval "1s"
+(defpoll ramusage :interval "3s"
   "scripts/get-ram")
 
 (defwidget sidestuff []
