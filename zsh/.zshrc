@@ -36,3 +36,7 @@ esac
 export PATH="/home/bieniucieniu/.local/share/fnm:$PATH"
 
 eval "$(fnm env --use-on-cd)"
+
+export PATH="/home/bieniucieniu/.local/share/bob/nvim-bin:$PATH"
+
+eval "$(zoxide init zsh)"
