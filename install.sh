@@ -5,7 +5,7 @@ if ! command -v yay &>/dev/null; then
 	makepkg -si
 fi
 
-yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git
+yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git alsa-utils
 
 #all nerd-fonts
 yay -Sy --needed nerd-fonts-meta
