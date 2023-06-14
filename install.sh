@@ -1,18 +1,17 @@
-if ! command -v yay &> /dev/null
-then
-    sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
+if ! command -v yay &>/dev/null; then
+	sudo pacman -S --needed git base-devel
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
 fi
 
-yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako
+yay -Sy --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils pulseaudio pulseaudio-bluetooth pipewire blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git
 
 #all nerd-fonts
 yay -Sy --needed nerd-fonts-meta
 
 #oh my zsh
-pacman -Sy --needed zsh curl git 
+pacman -Sy --needed zsh curl git
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # source ${HOME}/.zshrc
