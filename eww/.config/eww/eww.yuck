@@ -40,6 +40,9 @@
 (defpoll ramusage :interval "3s"
   "scripts/get-ram")
 
+(defpoll battery :interval "15s"
+  "scripts/get-battery")
+
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (metric :label "󰕾 "
@@ -48,7 +51,11 @@
     (metric :label "󰍛 "
             :value ramusage
             :onchange "")
-    ))
+    (metric :label "󰁹 "
+            :value battery
+            :onchange "")
+  )
+)
 
 (defwidget centerWidget []
   (box :halign "center"
