@@ -27,9 +27,21 @@
            :max 101
            :active {onchange != ""}
            :value value
-           :onchange onchange)))
+           :onchange onchange
+    )
+  )
+)
 
 
+(defwidget _network [strength offline excellent good okay slow]
+  (box :class "network"
+       :space-evenly false
+       :spacing 8
+    (box :class "label" strength)
+    (label :text {strength == "" ? offline :
+      strength < 26 ? slow :
+        strength < 51 ? okay :
+          strength < 76 ? good : excellent})))
 
 (deflisten music :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
@@ -43,6 +55,9 @@
 (defpoll battery :interval "15s"
   "scripts/get-battery")
 
+(defpoll wifi :interval "10s"
+  "scripts/get-wifi")
+
 (defwidget sidestuff []
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (metric :label "󰕾 "
@@ -54,6 +69,7 @@
     (metric :label "󰁹 "
             :value battery
             :onchange "")
+    (_network :strength wifi :offline "󰤭 " :excellent "󰤨 " :good "󰤥 " :okay "󰤢 " :slow "󰤟 ")
   )
 )
 
