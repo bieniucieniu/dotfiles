@@ -19,6 +19,7 @@
   )
 (defwidget metric [label value onchange]
   (box :orientation "h"
+       :visible {value != "" ? true : false}
        :class "metric"
        :space-evenly false
     (box :class "label" label)
