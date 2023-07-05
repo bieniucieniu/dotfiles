@@ -23,6 +23,7 @@ alias lg="lazygit"
 alias rr="rm -r"
 alias xvlc="exec vlc"
 alias rf="rm -rf"
+alias l="ls -l"
 
 
 # pnpm
