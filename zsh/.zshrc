@@ -24,7 +24,7 @@ alias rr="rm -r"
 alias xvlc="exec vlc"
 alias rf="rm -rf"
 alias l="ls -l"
-alias nd="nr dev"
+alias nrd="nr dev"
 
 
 # pnpm
