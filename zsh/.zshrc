@@ -17,7 +17,6 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
 
 alias lg="lazygit"
 alias rr="rm -r"
@@ -45,4 +44,4 @@ eval "$(zoxide init zsh)"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
