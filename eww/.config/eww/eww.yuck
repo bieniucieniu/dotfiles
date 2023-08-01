@@ -48,6 +48,7 @@
   (box :class "state"
        :space-evenly false
        :spacing 8
+       :visible {strength != "" ? true : false}
     (box :class "label" "${strength}%")
     (label :text {
         strength < 25 ? b_2 :
