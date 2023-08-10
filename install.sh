@@ -7,7 +7,7 @@ fi
 
 yay -Sy --needed bash awk grep socat jq python
 yay -S --needed pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
-yay -S --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git alsa-utils
+yay -S --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git alsa-utils gdm gnome-keyring polkit-kde-agent
 
 #all nerd-fonts
 yay -S --needed nerd-fonts-meta
