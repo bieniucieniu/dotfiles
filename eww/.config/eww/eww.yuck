@@ -90,7 +90,7 @@
   (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
     (metric :label "󰕾 "
             :value volume
-            :onchange "amixer -D pulse sset Master {}%")
+            :onchange "amixer sset Master {}%")
     (_ram :strength ramusage :label "󰍛 ")
     (_battery :strength battery :b_0 "󰂎 " :b_1 "󰁺 " :b_2 "󰁻 " :b_3 "󰁼 " :b_4 "󰁽 " :b_5 "󰁾 " :b_6 "󰁿" :b_7 "󰂀 " :b_8 "󰂁 " :b_9 "󰂂 " :b_full "󰁹 ")
     (_network :strength wifi :offline "󰤭 " :excellent "󰤨 " :good "󰤥 " :okay "󰤢 " :slow "󰤟 ")
