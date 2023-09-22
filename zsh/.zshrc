@@ -1,3 +1,5 @@
+
+#
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="nanotech"
@@ -6,7 +8,17 @@ ZSH_THEME="nanotech"
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-autoload -U compinit; compinit
+setopt autocd extendedglob
+unsetopt nomatch
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/bieniucieniu/.zshrc'
+
+autoload -Uz compinit
+compinit
+
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +54,5 @@ export PATH="/home/bieniucieniu/.local/share/bob/nvim-bin:$PATH"
 
 eval "$(zoxide init zsh)"
 
-
-# Load Angular CLI autocompletion.
-# source <(ng completion script)
+# Lines configured by zsh-newuser-install
+# End of lines added by compinstall
