@@ -5,15 +5,15 @@ if ! command -v yay &>/dev/null; then
 	makepkg -si
 fi
 
-yay -Sy --needed bash awk grep socat jq python
-yay -S --needed pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
-yay -S --needed hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git gnome-keyring polkit-kde-agent
+yay -Sy --needed --noconfirm bash awk grep socat jq python
+yay -S --needed --noconfirm pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber
+yay -S --needed --noconfirm hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git gnome-keyring polkit-kde-agent
 
 #all nerd-fonts
-yay -S --needed nerd-fonts-meta
+yay -S --needed --noconfirm nerd-fonts-meta
 
 #oh my zsh
-pacman -S --needed zsh curl git
+pacman -S --needed --noconfirm zsh curl git
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # source ${HOME}/.zshrc
