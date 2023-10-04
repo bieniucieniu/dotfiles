@@ -83,7 +83,7 @@
 (defpoll battery :interval "15s"
   "scripts/get-battery")
 
-(defpoll wifi :interval "10s"
+(defpoll wifi :interval "3s"
   "scripts/get-wifi")
 
 (defwidget sidestuff []
