@@ -7,8 +7,8 @@ fi
 
 yay -Sy --needed --noconfirm bash awk grep socat jq python
 yay -S --needed --noconfirm pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber alsa-utils
-yay -S --needed --noconfirm hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git gnome-keyring polkit-kde-agent
-yay -Sy --needed --noconfirm gtk3 gtk-layer-shell pango gdk-pixbuf2 cairo glib2 gcc-libs glibc                                                                                                              master ] 4:34 PM
+ yay -S --needed --noconfirm hyprland wl-clipboard rofi zsh alacritty networkmanager bluez bluez-utils blueman neovim github-cli google-chrome stow tmux wl-clipboard copyq hyprpicker-git hyprpaper mako reflector xdg-desktop-portal-hyprland-git
+yay -Sy --needed --noconfirm gtk3 gtk-layer-shell pango gdk-pixbuf2 cairo glib2 gcc-libs glibc                                                                                                              
 #all nerd-fonts
 yay -S --needed --noconfirm nerd-fonts-meta
 
