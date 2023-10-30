@@ -56,3 +56,10 @@ eval "$(zoxide init zsh)"
 
 # Lines configured by zsh-newuser-install
 # End of lines added by compinstall
+
+# bun completions
+[ -s "/home/bieniucieniu/.bun/_bun" ] && source "/home/bieniucieniu/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
