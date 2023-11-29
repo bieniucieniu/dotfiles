@@ -63,3 +63,7 @@ eval "$(zoxide init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/home/bieniucieniu/.turso:$PATH"
+export PATH="/home/bieniucieniu/go/bin:$PATH"
