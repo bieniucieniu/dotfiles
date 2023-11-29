@@ -34,7 +34,7 @@ alias lg="lazygit"
 alias rr="rm -r"
 alias xvlc="exec vlc"
 alias rf="rm -rf"
-alias l="ls -l"
+alias l="ls -lh"
 alias nrd="nr dev"
 
 
@@ -63,7 +63,8 @@ eval "$(zoxide init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$PATH:$HOME/.turso:$PATH"
+export PATH="$PATH:$HOME/go/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/env"
 
-# Turso
-export PATH="/home/bieniucieniu/.turso:$PATH"
-export PATH="/home/bieniucieniu/go/bin:$PATH"
+
