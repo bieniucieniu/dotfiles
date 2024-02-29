@@ -44,13 +44,14 @@
         strength < 51 ? okay :
           strength < 76 ? good : excellent})))
 
-(defwidget _battery [strength b_0 b_1 b_2 b_3 b_4 b_5 b_6 b_7 b_8 b_9 b_full] 
+(defwidget _battery [strength status b_charging b_1 b_2 b_3 b_4 b_5 b_6 b_7 b_8 b_9 b_full] 
   (box :class "state"
        :space-evenly false
        :spacing 8
        :visible {strength != "" ? true : false}
     (box :class "label" "${strength}%")
     (label :text {
+      status == "Charging" ? b_charging :
         strength < 25 ? b_2 :
           strength < 35 ? b_3 :
             strength < 45 ? b_4 :
@@ -83,6 +84,9 @@
 (defpoll battery :interval "10s"
   "scripts/get-battery")
 
+(defpoll batteryStatus :interval "10s"
+  "scripts/get-battery-status")
+
 (defpoll wifi :interval "1s"
   "scripts/get-wifi")
 
@@ -92,7 +96,7 @@
             :value volume
             :onchange "amixer sset Master {}%")
     (_ram :strength ramusage :label "󰍛 ")
-    (_battery :strength battery :b_0 "󰂎 " :b_1 "󰁺 " :b_2 "󰁻 " :b_3 "󰁼 " :b_4 "󰁽 " :b_5 "󰁾 " :b_6 "󰁿" :b_7 "󰂀 " :b_8 "󰂁 " :b_9 "󰂂 " :b_full "󰁹 ")
+    (_battery :strength battery :status batteryStatus :b_charging "󰂄 " :b_1 "󰁺 " :b_2 "󰁻 " :b_3 "󰁼 " :b_4 "󰁽 " :b_5 "󰁾 " :b_6 "󰁿" :b_7 "󰂀 " :b_8 "󰂁 " :b_9 "󰂂 " :b_full "󰁹 ")
     (_network :strength wifi :offline "󰤭 " :excellent "󰤨 " :good "󰤥 " :okay "󰤢 " :slow "󰤟 ")
   )
 )

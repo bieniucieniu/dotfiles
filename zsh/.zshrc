@@ -68,3 +68,7 @@ export PATH="$PATH:$HOME/go/bin:$PATH"
 export PATH="$PATH:$HOME/.cargo/env"
 
 
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
