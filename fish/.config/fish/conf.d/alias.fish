@@ -1,0 +1,5 @@
+alias lg="lazygit"
+alias rr="rm -r"
+alias rf="rm -rf"
+alias l="ls -lh"
+alias nrd="nr dev"
