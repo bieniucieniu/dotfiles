@@ -11,11 +11,16 @@ function fish_right_prompt
 
     # The git prompt's default format is ' (%s)'.
     # We don't want the leading space.
-    set -l vcs (fish_vcs_prompt '%s' 2>/dev/null)
+    set -l vcs (fish_vcs_prompt '(%s)' 2>/dev/null)
 
     set -l d (set_color brgrey)(date "+%R")(set_color normal)
 
-    set -l delim (set_color blue)" ]"
+    set -l duration "$cmd_duration$CMD_DURATION"
+    if test $duration -gt 100
+        set duration (math $duration / 1000)s
+    else
+        set duration
+    end
 
     set -q VIRTUAL_ENV_DISABLE_PROMPT
     or set -g VIRTUAL_ENV_DISABLE_PROMPT true
@@ -23,5 +28,5 @@ function fish_right_prompt
     and set -l venv (string replace -r '.*/' '' -- "$VIRTUAL_ENV")
 
     set_color normal
-    string join " " -- $venv $vcs $delim $d
+    string join " " -- $venv $duration $vcs $d
 end

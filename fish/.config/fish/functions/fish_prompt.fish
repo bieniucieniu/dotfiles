@@ -4,11 +4,13 @@ function fish_prompt
     set -l normal (set_color normal)
     set -l usercolor (set_color $fish_color_user)
 
-    set -l delim (set_color blue)" [ "
+    set -l delim " > "
+    # If we don't have unicode use a simpler delimiter
+    string match -qi "*.utf-8" -- $LANG $LC_CTYPE $LC_ALL; or set delim " > "
 
     fish_is_root_user; and set delim "#"
 
-    set -l cwd (set_color $fish_color_cwd)
+    set -l cwd (set_color green)
 
     # Prompt status only if it's not 0
     set -l prompt_status
