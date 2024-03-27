@@ -1,4 +1,7 @@
 
-export PATH="$HOME/.bun/bin:$PATH"
-export PATH="$PATH:$HOME/.turso:$PATH"
-export PATH="$PATH:$HOME/.cargo/env"
+if status --is-login
+    fish_add_path "$HOME/.bun/bin"
+    fish_add_path "$HOME/.turso"
+    fish_add_path "$HOME/.cargo/env"
+    fish_add_path "$HOME/.cargo/bin"
+end
