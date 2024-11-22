@@ -1,14 +1,9 @@
 return {
   "stevearc/conform.nvim",
-  branch = "nvim-0.9",
-  opts = {
-    lazy = false,
-    opts = {
+  lazy = false,
+  opts = function()
+    return {
       notify_on_error = false,
-    },
-  },
-  config = function()
-    require("conform").setup({
       format_on_save = {
         timeout_ms = 500,
         lsp_format = "fallback",
@@ -20,7 +15,9 @@ return {
         typescript = { "biome-check" },
         javascript = { "biome-check" },
         json = { "biome-check" },
+        go = { "gofmt" },
+        sql = { "sqlfmt" },
       },
-    })
+    }
   end,
 }
